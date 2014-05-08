@@ -4,5 +4,8 @@
     <string name="app_name">first-project-android</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="Nome">Nome</string>
+    <string name="Email">Email</string>
+    <string name="ApplicationExample">Application Example</string>
 
 </resources>
