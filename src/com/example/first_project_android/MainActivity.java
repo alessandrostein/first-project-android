@@ -37,6 +37,19 @@ public class MainActivity extends ActionBarActivity {
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle presses on the action bar items
+		switch (item.getItemId()) {
+		case R.id.action_bar:
+			openSearch();
+			return true;
+		case R.id.action_settings:
+			openSettings();
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
+		
+		
 		// Handle action bar item clicks here. The action bar will
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
@@ -45,6 +58,20 @@ public class MainActivity extends ActionBarActivity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+
+	private void openSettings(Bundle saveInstanceState) {
+		super.onCreate(saveInstanceState);
+		setContentView(R.layout.activity_display_message);
+		
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		// If your minSdkVersion is 11 or higher, instead use:
+	    // getActionBar().setDisplayHomeAsUpEnabled(true);
+	}
+
+	private void openSearch() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	/**
