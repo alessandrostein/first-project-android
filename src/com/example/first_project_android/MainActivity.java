@@ -31,7 +31,7 @@ public class MainActivity extends ActionBarActivity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu items for use in the action bar
 		MenuInflater inflater = getMenuInflater();
-		inflater.inflate(R.menu.main_activity_actions, menu);
+		inflater.inflate(R.menu.display_message, menu);
 		return super.onCreateOptionsMenu(menu);
 	}
 
@@ -43,7 +43,7 @@ public class MainActivity extends ActionBarActivity {
 			openSearch();
 			return true;
 		case R.id.action_settings:
-			openSettings();
+			openSettings(item);
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);
@@ -64,9 +64,9 @@ public class MainActivity extends ActionBarActivity {
 		super.onCreate(saveInstanceState);
 		setContentView(R.layout.activity_display_message);
 		
-		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		// If your minSdkVersion is 11 or higher, instead use:
-	    // getActionBar().setDisplayHomeAsUpEnabled(true);
+	    getActionBar().setDisplayHomeAsUpEnabled(true);
 	}
 
 	private void openSearch() {
